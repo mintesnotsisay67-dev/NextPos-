@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Nunito Sans", var(--font-sans);
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom styles for receipt design, background gradients, and sleek transitions */
+html {
+  font-size: 14px !important;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-300 bg-[#0F172A];
+    font-family: var(--font-sans);
+  }
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+}
+
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Custom scrollbar for better visual hierarchy in POS tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==========================================
+   EXTENSIVELY POLISHED LIGHT/WHITE MODE THEME
+   ========================================== */
+.light {
+  background-color: #f8fafc !important;
+  color: #334155 !important;
+}
+
+.light body {
+  background-color: #f8fafc !important;
+  color: #334155 !important;
+}
+
+/* Base Overrides for Main Backgrounds */
+.light .min-h-screen {
+  background-color: #f8fafc !important;
+  color: #334155 !important;
+}
+
+.light .bg-\[\#0F172A\],
+.light .bg-[#0F172A] {
+  background-color: #f8fafc !important;
+}
+
+.light .bg-\[\#17253e\],
+.light .bg-[#17253e] {
+  background-color: #f1f5f9 !important;
+  color: #0d1e36 !important;
+}
+
+.light .bg-\[\#111827\],
+.light .bg-[#111827] {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+.light .bg-slate-955 {
+  background-color: #f1f5f9 !important;
+}
+
+.light .bg-slate-950,
+.light .bg-slate-950\/60,
+.light .bg-slate-950\/80 {
+  background-color: #f1f5f9 !important; /* Soft slate grey-100 bg */
+}
+
+/* Cards & Panel Layouts */
+.light .bg-slate-900,
+.light .bg-[#1E293B],
+.light .bg-slate-800,
+.light .bg-slate-900\/50,
+.light .bg-slate-800\/50,
+.light .bg-slate-800\/40,
+.light .bg-slate-850 {
+  background-color: #ffffff !important; /* Solid White Card backgrounds */
+  color: #334155 !important;
+}
+
+/* Custom hover adjustments */
+.light .hover\:bg-slate-805:hover,
+.light .hover\:bg-slate-800\/40:hover,
+.light .hover\:bg-slate-800\/60:hover,
+.light .hover\:bg-slate-800/60:hover,
+.light .hover\:bg-slate-800\/50:hover,
+.light .hover\:bg-slate-800:hover,
+.light .hover\:bg-slate-700:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Borders */
+.light .border-slate-800,
+.light .border-slate-850,
+.light .border-slate-750,
+.light .border-slate-700,
+.light .border-slate-900 {
+  border-color: #cbd5e1 !important; /* Light Slate borders 300 */
+}
+
+.light .divide-slate-800,
+.light .divide-slate-850 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Form inputs, select selections, textareas */
+.light input,
+.light select,
+.light textarea,
+.light .bg-\[\#1E293B\] {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.light input::placeholder {
+  color: #94a3b8 !important; /* Muted placeholder colors */
+}
+
+/* Text Primary, Secondary & Accent levels */
+.light .text-white,
+.light .text-slate-100,
+.light .text-slate-50 {
+  color: #0f172a !important; /* Bold Midnight Slate-900 */
+}
+
+.light .text-slate-200,
+.light .text-slate-300,
+.light .text-slate-350,
+.light .text-slate-400,
+.light .text-slate-450 {
+  color: #475569 !important; /* Muted Cool Slate-600 */
+}
+
+.light .text-slate-500 {
+  color: #64748b !important; /* Deep Silver Slate-500 */
+}
+
+/* Core Navigation overrides */
+.light nav {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light nav button,
+.light nav span,
+.light nav div {
+  color: #334155;
+}
+
+.light nav button.bg-emerald-500\/10 {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+}
+
+/* Active Navigation Buttons */
+.light .bg-emerald-500\/10 {
+  background-color: #e6fbf2 !important;
+  color: #059669 !important;
+}
+
+.light nav span.text-emerald-500,
+.light nav span .text-emerald-500 {
+  color: #10b981 !important;
+}
+
+/* Modal Backdrops & Overlays */
+.light .fixed.inset-0.bg-slate-950\/80 {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+/* Sub-panels, headers, labels */
+.light label {
+  color: #475569 !important;
+}
+
+/* Footer Section Light Adjustments */
+.light footer {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light footer h4 {
+  color: #0f172a !important;
+}
+
+.light footer p,
+.light footer span,
+.light footer li button {
+  color: #475569 !important;
+}
+
+.light footer .hover\:text-white:hover {
+  color: #10b981 !important;
+}
+
+/* Tab Highlights and active categories */
+.light .bg-slate-800\/60ByCode,
+.light #theme-toggle {
+  background-color: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light #theme-toggle:hover {
+  background-color: #cbd5e1 !important;
+}
+
+/* POS checkout lists & cart rows */
+.light .bg-emerald-950\/30 {
+  background-color: #d1fae5 !important; 
+  color: #065f46 !important;
+}
+
+.light .bg-rose-950\/30 {
+  background-color: #fee2e2 !important;
+  color: #991b1b !important;
+}
+
+.light .bg-slate-950\/35 {
+  background-color: #f1f5f9 !important;
+}
+
+/* Barcode shortcuts scroll view styles */
+.light .bg-slate-805, 
+.light [id^="scan-shortcut-"] {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
+.light [id^="scan-shortcut-"]:hover {
+  border-color: #10b981 !important;
+  background-color: #e6fbf2 !important;
+}
+
+.light [id^="scan-shortcut-"] .text-white {
+  color: #0f172a !important;
+}
+
+

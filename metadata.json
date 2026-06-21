@@ -1,0 +1,6 @@
+{
+  "name": "NextPOS",
+  "description": "Modern Ethiopian Mobile POS with offline support, real-time analytics, and localized currency and tax configuration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
