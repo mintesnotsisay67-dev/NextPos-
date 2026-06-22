@@ -186,7 +186,7 @@ This simulated bundle enables complete hardware feed tests on standard Android h
               <div className="space-y-2 text-xs text-slate-400">
                 <p className="flex items-center">
                   <PhoneCall className="w-3.5 h-3.5 mr-2 text-emerald-400 shrink-0" />
-                  <span>+251 911 000 000 (Addis office)</span>
+                  <span>+251965307585 (Addis HQ)</span>
                 </p>
                 <p className="flex items-center">
                   <MessageCircle className="w-3.5 h-3.5 mr-2 text-blue-400 shrink-0" />

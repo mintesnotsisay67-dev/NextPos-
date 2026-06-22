@@ -17,28 +17,30 @@ export default function PricingTab({ setActiveTab }: PricingTabProps) {
 
   const tiers = [
     {
-      name: 'Simulated Free',
-      description: 'Perfect for micro-souqs, roadside stands, and start-up kiosks.',
-      priceMonthly: 0,
-      priceYearly: 0,
+      name: 'Simulated Starter',
+      description: 'Perfect for micro-souqs, roadside stands, and start-up kiosks with 500 monthly simulated tx.',
+      priceMonthly: 800,
+      priceYearly: 667,
+      priceYearlyTotal: 8000,
       badge: 'Micro-Merchants',
       features: [
         'Single device POS checkout',
-        'Offline checkout storage (up to 30 items)',
+        '500 monthly transactions simulated',
         'Basic Turn-Over Tax (2% TOT Goods) auto-calculation',
         'Daily sales sum tracker',
         'Local browser storage persistence',
         'Standard receipt view simulator'
       ],
-      cta: 'Start with Free Simulator',
+      cta: 'Start with Starter Simulator',
       tabValue: 'sandbox' as NavigationTab,
       popular: false
     },
     {
       name: 'Growth Outlet',
       description: 'Ideal for busy cafes, clothing boutiques, and Bole pharmacies.',
-      priceMonthly: 490,
-      priceYearly: 390, // equivalent monthly
+      priceMonthly: 2500,
+      priceYearly: 1875, // equivalent monthly for 22,500/yr
+      priceYearlyTotal: 22500,
       badge: 'Merchant Standard',
       features: [
         'Up to 3 synchronized mobile terminals',
@@ -56,8 +58,9 @@ export default function PricingTab({ setActiveTab }: PricingTabProps) {
     {
       name: 'Merkato Wholesale',
       description: 'Built for high-volume traders, distributors, and multi-store operations.',
-      priceMonthly: 1250,
-      priceYearly: 990, // equivalent monthly
+      priceMonthly: 3200,
+      priceYearly: 2500, // equivalent monthly for 30,000/yr
+      priceYearlyTotal: 30000,
       badge: 'Enterprise Bulk',
       features: [
         'Unlimited registers, stores, and active users',
@@ -189,9 +192,14 @@ export default function PricingTab({ setActiveTab }: PricingTabProps) {
                     <span className="text-xs font-medium text-slate-400">/ month</span>
                   </div>
                   {billingCycle === 'yearly' && price > 0 && (
-                    <p className="text-[10.5px] text-emerald-400 font-semibold mt-1 font-mono">
-                      Billed annually (Save ETB {(tier.priceMonthly - tier.priceYearly) * 12}/yr)
-                    </p>
+                    <div className="mt-1.5 space-y-0.5 font-mono">
+                      <p className="text-[11px] text-emerald-400 font-bold">
+                        Billed annually: ETB {tier.priceYearlyTotal.toLocaleString()}/yr
+                      </p>
+                      <p className="text-[10px] text-emerald-500/80 font-medium">
+                        (Save ETB {((tier.priceMonthly * 12) - tier.priceYearlyTotal).toLocaleString()}/year)
+                      </p>
+                    </div>
                   )}
                   {price === 0 && (
                     <p className="text-[10.5px] text-slate-400 font-semibold mt-1">
