@@ -17,6 +17,7 @@ import {
   FileSpreadsheet
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import SupportFAQ from './SupportFAQ';
 
 interface AboutTabProps {
   setActiveTab: (tab: NavigationTab) => void;
@@ -186,6 +187,11 @@ export default function AboutTab({ setActiveTab }: AboutTabProps) {
               </p>
             </div>
           </div>
+        </motion.div>
+
+        {/* Support Knowledge Base Section */}
+        <motion.div variants={itemVariants}>
+          <SupportFAQ />
         </motion.div>
 
         {/* CTA */}

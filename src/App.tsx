@@ -11,7 +11,7 @@ import PricingTab from './components/PricingTab';
 import AboutTab from './components/AboutTab';
 import LearningTab from './components/LearningTab';
 import DashboardDemo from './components/DashboardDemo';
-import { HelpCircle, Sparkles, MessageCircle, FileText, PhoneCall, Smartphone, ArrowDownToLine } from 'lucide-react';
+import { HelpCircle, Sparkles, MessageCircle, FileText, PhoneCall } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
@@ -27,28 +27,6 @@ export default function App() {
     root.classList.remove('light', 'dark');
     root.classList.add(theme);
   }, [theme]);
-
-  const downloadMockApk = () => {
-    const content = `NextPOS Mobile Suite - Simulated Android Package (APK)
-=====================================================
-Package Name: et.nextpos.merchant.suite
-Version: 2.4.3-beta-compliance
-Build Signature: SHA256:7f99ee30ca24e645903bcf52e42023a1093bccef9023
-Target SDK: API 34 (Android 14+)
-
-NextPOS is certified to connect seamlessly with:
-- 58mm & 80mm ESC/POS wireless thermal receipt printers
-- Domestic payment registers (Telebirr, CBE Birr, Chapa)
-- Dual online/offline ERCA tax compliance ledgers
-
-This simulated bundle enables complete hardware feed tests on standard Android handheld systems.`;
-    const blob = new Blob([content], { type: 'application/vnd.android.package-archive' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.setAttribute('href', url);
-    a.setAttribute('download', 'NextPOS-v2.4.3-Simulator-Demo.apk');
-    a.click();
-  };
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -155,20 +133,6 @@ This simulated bundle enables complete hardware feed tests on standard Android h
                     Birr (ETB) Subscription Tiers
                   </button>
                 </li>
-                <li className="pt-2 border-t border-slate-800/60 mt-2 space-y-1.5">
-                  <div className="text-[10px] font-mono font-bold text-emerald-450 uppercase tracking-widest text-emerald-400">Mobile Options</div>
-                  <div className="flex flex-col space-y-1 text-slate-400 pl-1">
-                    <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all text-[11px] block text-left">
-                      🤖 Play Store Link
-                    </a>
-                    <a href="https://www.apple.com/app-store" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-all text-[11px] block text-left">
-                      🍏 App Store Link
-                    </a>
-                    <button onClick={downloadMockApk} className="hover:text-emerald-400 text-slate-405 text-slate-400 text-left transition-colors flex items-center gap-1 cursor-pointer text-[11px]">
-                      <ArrowDownToLine className="w-3.5 h-3.5 inline text-emerald-400" /> Download Simulator APK
-                    </button>
-                  </div>
-                </li>
               </ul>
             </div>
 
@@ -190,10 +154,10 @@ This simulated bundle enables complete hardware feed tests on standard Android h
                 </p>
                 <p className="flex items-center">
                   <MessageCircle className="w-3.5 h-3.5 mr-2 text-blue-400 shrink-0" />
-                  <span>t.me/NextPOSEthiopia_Bot</span>
+                  <span>t.me/nextpos1</span>
                 </p>
                 <p className="text-[10px] text-slate-500 font-mono">
-                  Supported billing integrations: Telebirr, CBE Birr, Chapa, Awash, Ahadu Bank API.
+                  Supported billing integrations: telebirr, chapa, cbe birr
                 </p>
               </div>
             </div>

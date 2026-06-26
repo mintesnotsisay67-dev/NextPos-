@@ -105,9 +105,14 @@ export default function PricingTab({ setActiveTab }: PricingTabProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
         {/* Header Block */}
         <div className="space-y-4 max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-xs font-mono font-bold">
-            <Coins className="w-4 h-4 mr-1 text-emerald-405 text-emerald-405 text-emerald-400" />
-            <span>Fair, Transparent Local Rates</span>
+          <div className="flex flex-wrap justify-center gap-2.5">
+            <div className="inline-flex items-center space-x-1.5 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-xs font-mono font-bold">
+              <Coins className="w-4 h-4 mr-1 text-emerald-400" />
+              <span>Fair, Transparent Local Rates</span>
+            </div>
+            <div className="inline-flex items-center space-x-1.5 bg-amber-500/10 text-amber-400 border border-amber-500/20 px-3 py-1 rounded-full text-xs font-mono font-bold">
+              <span>Setup or Hardware Fee: ETB 30,000</span>
+            </div>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold font-display leading-tight text-white tracking-tight">
             Plans Denominated in <span className="text-emerald-500">Ethiopian Birr</span>
